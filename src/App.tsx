@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
+import {useDispatch} from "react-redux";
+import {getAllTasksService} from "./services/tasksService";
+import {AppDispatch} from './app/store';
 
 function App() {
+	const dispatch = useDispatch<AppDispatch>();
+	useEffect(() => {
+		dispatch(getAllTasksService());
+	});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	  <div className="bg-cyan-200 h-full w-screen p-14">
+		  <div className="flex flex-col items-center justify-center pb-10">
+			  <h1 className="font-bold text-4xl">Todo List</h1>
+		  </div>
+		  <div className="flex flex-row justify-start h-full">
+			  <div className="flex h-screen w-1/6">
+				  <TaskForm/>
+			  </div>
+			  <div className="w-5/6">
+				  <TaskList/>
+			  </div>
+		  </div>
+	  </div>
   );
 }
 
