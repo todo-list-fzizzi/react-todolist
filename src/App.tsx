@@ -15,7 +15,7 @@ function App() {
   return (
 	  <div className="bg-cyan-200 h-full w-screen p-14">
 		  <div className="flex flex-col items-center justify-center pb-10">
-			  <h1 className="font-bold text-4xl">Todo List</h1>
+			  <h1 className="font-bold text-4xl">{"Todo List"}</h1>
 		  </div>
 		  <div className="flex flex-row justify-start h-full">
 			  <div className="flex h-screen w-1/6">
