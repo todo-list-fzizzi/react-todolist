@@ -11,9 +11,9 @@ function App() {
 	useEffect(() => {
 		dispatch(getAllTasksService());
 	});
-
+  // "Quicksand", sans-serif
   return (
-	  <div className="bg-cyan-200 h-full w-screen p-14">
+	  <div className="bg-cyan-100 h-full w-screen p-14 font-sans">
 		  <div className="flex flex-col items-center justify-center pb-10">
 			  <h1 className="font-bold text-4xl">{"Todo List"}</h1>
 		  </div>

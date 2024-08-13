@@ -30,7 +30,7 @@ const TaskForm = () => {
 
 	return (
 		<div>
-			<form className="flex flex-col bg-blue-300 p-3 rounded-lg gap-3">
+			<form className="flex flex-col bg-white p-3 rounded-lg gap-3">
 				<h2 className="text-2xl font-bold">Create new Task:</h2>
 				<TextField style={{borderRadius: 100}} type='text' value={title} label="Title"
 						   onChange={handleTitleChange}/>

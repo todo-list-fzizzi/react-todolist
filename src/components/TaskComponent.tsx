@@ -31,7 +31,7 @@ const TaskComponent = ({task}:{task: Task}) => {
 	}
 
 	return (
-		<div className="break-words bg-blue-300 rounded-lg">
+		<div className="break-words bg-white rounded-lg">
 			<div className="flex flex-row">
 				<div className="flex justify-items-center">
 					<Checkbox onChange={handleUpdate} checked={isCompleted}/>
